@@ -1,0 +1,12 @@
+{
+  "name": "richard-slihoczki-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal academic & engineering portfolio — static HTML/CSS/JS, no build step.",
+  "scripts": {
+    "start": "npx --yes serve@14 -l 3000 .",
+    "dev": "npm start",
+    "build": "node scripts/build.mjs"
+  },
+  "license": "UNLICENSED"
+}

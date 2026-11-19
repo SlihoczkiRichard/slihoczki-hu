@@ -1,0 +1,4 @@
+# Keep private drafts and tooling off the public deployment
+docs/
+scripts/
+README.md

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dos">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Richard Slihoczki · network security</title>
+  <meta name="description" content="Richard Slihoczki. Computer Engineering student at BME (Intelligent Networks), Erasmus+ at UPC Barcelona. Zero Trust, Security Service Edge, SDN/NFV. Thesis on performance, scaling and failure behaviour of connector-based Zero Trust access.">
+  <meta name="author" content="Richard Slihoczki">
+  <meta property="og:title" content="Richard Slihoczki · network security">
+  <meta property="og:description" content="Zero Trust, SSE and programmable networks. Computer Engineering BSc at BME, Erasmus+ at UPC.">
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="en_US">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t === 'dos' || t === 'c64' || t === 'paper') document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Richard Slihoczki",
+    "alternateName": "Slihoczki Richárd",
+    "email": "mailto:richard.slihoczki@outlook.com",
+    "knowsLanguage": ["hu", "en"],
+    "affiliation": [
+      { "@type": "CollegeOrUniversity", "name": "Budapest University of Technology and Economics", "url": "https://www.bme.hu" },
+      { "@type": "CollegeOrUniversity", "name": "Universitat Politècnica de Catalunya", "url": "https://www.upc.edu" }
+    ],
+    "sameAs": [
+      "https://github.com/SlihoczkiRichard",
+      "https://linkedin.com/in/richardslihoczki"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="crt" aria-hidden="true"></div>
+
+
+  <header class="menubar">
+    <div class="wrap menubar-inner">
+      <a class="prog" href="#top">RICHARD.EXE</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero wrap" id="top">
+<pre class="boot boot-dos" aria-hidden="true">Starting DOS...
+
+HIMEM is testing extended memory... done.
+NE2000 packet driver, I/O 0x300, IRQ 3 ........ loaded
+C:\&gt; dhcp
+Lease obtained: 10.0.0.42 / 255.255.255.0
+C:\&gt; telnet richard.local
+Connected to richard.local. Escape character is '^]'.</pre>
+<pre class="boot boot-c64" aria-hidden="true">    **** SLIHOCZKI 64 BASIC V2 ****
+
+ 64K RAM SYSTEM  38911 BASIC BYTES FREE
+
+READY.
+ATDT 555-0164
+CONNECT 2400
+WELCOME TO RICHARD'S BBS</pre>
+<pre class="boot boot-paper" aria-hidden="true">FIELD NOTES ..................... No. 01
+Budapest ⇄ Barcelona · one tunnel, two cities</pre>
+
+      <p class="kicker">Richard</p>
+      <h1>
+        <span class="sr-only">Richard Slihoczki</span>
+<pre class="banner" aria-hidden="true">███████╗██╗     ██╗██╗  ██╗ ██████╗  ██████╗███████╗██╗  ██╗██╗
+██╔════╝██║     ██║██║  ██║██╔═══██╗██╔════╝╚══███╔╝██║ ██╔╝██║
+███████╗██║     ██║███████║██║   ██║██║       ███╔╝ █████╔╝ ██║
+╚════██║██║     ██║██╔══██║██║   ██║██║      ███╔╝  ██╔═██╗ ██║
+███████║███████╗██║██║  ██║╚██████╔╝╚██████╗███████╗██║  ██╗██║
+╚══════╝╚══════╝╚═╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝╚══════╝╚═╝  ╚═╝╚═╝</pre>
+      </h1>
+
+      <p class="role"><span>Computer Engineering @ BME</span><span class="sep" aria-hidden="true"> | </span><span>Erasmus+ @ UPC-FIB Barcelona</span></p>
+
+      <p class="motto">"To build the future, we must first understand the foundations of the past."</p>
+
+      <div class="hero-grid">
+        <div class="pitch">
+          <p>
+            I work on network security, mostly Zero Trust. The idea that every request should be checked, no matter where it comes from, is almost fifty years old. What's new is that we can finally afford to do it everywhere.
+          </p>
+          <p>
+            I've configured HPE Aruba Security Service Edge policies and <span class="nw">zero-trust</span> tunnels on real enterprise networks. My thesis asks what happens next: I load a connector until it breaks, bring up a second one automatically, cut one off the network on purpose, and time how fast a new <span class="nw">threat-intel</span> entry actually gets blocked. UPC in Barcelona added the other half of the picture: programmable data planes, <span class="nw">in-band</span> telemetry and SDN/NFV orchestration.
+          </p>
+          <p class="links">
+            <a href="https://github.com/SlihoczkiRichard" target="_blank" rel="me noopener">[GITHUB]</a>
+            <a href="https://linkedin.com/in/richardslihoczki" target="_blank" rel="me noopener">[LINKEDIN]</a>
+            <a class="hot" href="assets/cv/Richard_Slihoczki_CV.pdf" download>[CV.PDF ↓]</a>
+          </p>
+        </div>
+
+        <figure class="ascii-fig" aria-labelledby="fig1">
+<pre role="img" aria-label="Diagram: a user request passes through a Security Service Edge enforcement point, which asks a policy engine before allowing access to the application. The thesis measures the time between t0 and t1.">
+┌────────┐ request  ┌────────┐  allow   ┌──────────┐
+│  USER  │<span class="wire" data-wire>──t0─────▶</span>│  SSE   │<span class="wire" data-wire data-delay="5">──t1─────▶</span>│   APP    │
+│ device │          │  PEP   │          │ resource │
+└────────┘          └──┬──▲──┘          └──────────┘
+                ask    │  │  decide
+                       ▼  │
+                 ┌────────┴────────┐
+                 │  POLICY ENGINE  │
+                 │ identity·posture│
+                 └─────────────────┘
+
+    Δt = t1 − t0  ⇒  what the client feels</pre>
+          <figcaption id="fig1">fig. 1: the path every request takes</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== RESEARCH ===== -->
+    <section class="wrap block" id="research" aria-labelledby="h-research">
+      <h2 id="h-research"><span class="cmd">C:\&gt; ping -t research</span>What I work on</h2>
+
+      <div class="win">
+        <dl class="dir">
+          <div>
+            <dt>ZEROTRUST.SSE</dt>
+            <dd>Zero Trust Network Access and Security Service Edge in enterprise hybrid clouds: connector-based access over outbound mTLS, cloud policy enforcement, and how it behaves under load and failure. Reference point: NIST SP 800-207.</dd>
+          </div>
+        </dl>
+      </div>
+
+      <h3 class="sub">Toolbox</h3>
+      <table class="tools">
+        <tbody>
+          <tr><th scope="row">network</th><td>Zero Trust (ZTNA) · HPE Aruba SSE · OSPF · BGP · VLAN trunking · SDN/NFV</td></tr>
+          <tr><th scope="row">analysis</th><td>Wireshark · deep packet inspection · IPAM</td></tr>
+          <tr><th scope="row">systems</th><td>Linux (Ubuntu, Debian) · Bash · Git · Docker · n8n</td></tr>
+          <tr><th scope="row">code</th><td>Python · C# · Java · VBA · SQL (PostgreSQL) · REST APIs</td></tr>
+          <tr><th scope="row">languages</th><td>Hungarian (native) · English (B2, professional working)</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== PAST → FUTURE ===== -->
+    <section class="wrap block" id="past" aria-labelledby="h-past">
+      <h2 id="h-past"><span class="cmd">C:\&gt; tracert 1975</span>Reading the past</h2>
+      <p class="intro">Zero Trust sounds new. It isn't. Following an idea back to where it started is how I make sense of where it's going.</p>
+
+      <ol class="lineage">
+        <li><span class="yr">1975</span><p>Saltzer and Schroeder write down the principles of <em>least privilege</em> and <em>complete mediation</em>: check every access, every time.</p></li>
+        <li><span class="yr">1988</span><p>The Morris worm spreads across the early Internet. Trusting a machine because it's "inside" stops looking like a safe bet.</p></li>
+        <li><span class="yr">2004</span><p>The Jericho Forum argues for <span class="nw">de-perimeterisation</span>. The network edge is no longer a wall you can rely on.</p></li>
+        <li><span class="yr">2010</span><p>John Kindervag at Forrester gives the idea a name: Zero Trust.</p></li>
+        <li><span class="yr">2014</span><p>Google describes BeyondCorp: no privileged corporate network, access decided per request.</p></li>
+        <li><span class="yr">2020</span><p>NIST SP 800-207 turns it into a reference architecture.</p></li>
+        <li class="now"><span class="yr">2026</span><p>My thesis: once everyone deploys it, what happens under load, during scale-out, and when a connector quietly disappears? <span class="blink" aria-hidden="true">█</span></p></li>
+      </ol>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section class="wrap block" id="education" aria-labelledby="h-edu">
+      <h2 id="h-edu"><span class="cmd">C:\&gt; nslookup bme.hu upc.edu</span>Education</h2>
+
+      <div class="win">
+        <article class="entry">
+          <p class="meta">Sep 2026 – Jan 2027 · Barcelona, Spain</p>
+          <h3>Universitat Politècnica de Catalunya (UPC – BarcelonaTech, FIB)</h3>
+          <p>Erasmus+ exchange, Computer Engineering. Graduate modules: Advanced Network Architectures &amp; Management, High Performance Computing, SDN/NFV Orchestration, Future Internet Protocols.</p>
+          <p class="note">focus: programmable data planes · <span class="nw">in-band</span> telemetry · distributed <span class="nw">high-throughput</span> networks</p>
+        </article>
+        <article class="entry">
+          <p class="meta">Sep 2023 – Jan 2027 · Budapest, Hungary</p>
+          <h3>Budapest University of Technology and Economics (BME)</h3>
+          <p>BSc in Computer Engineering, specialisation in Intelligent Networks (Department of Networked Systems and Services). Thesis: <em>Empirical Evaluation of Performance, Scalability, and Threat Protection in <span class="nw">Connector-Based</span> Zero Trust Architecture</em>, advised by dr. Márk Péter Szalay and Zoltán Horváth.</p>
+        </article>
+        <article class="entry">
+          <p class="meta">Sep 2018 – Jun 2023 · Budapest, Hungary</p>
+          <h3>BMSZC Petrik Lajos Bilingual Technical School</h3>
+          <p>Vocational degree in IT (software development and networks). Cisco CCNA curriculum, enterprise switching and routing, Linux administration, OOP in C# and Java.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== WORK ===== -->
+    <section class="wrap block" id="work" aria-labelledby="h-work">
+      <h2 id="h-work"><span class="cmd">C:\&gt; netstat -a /work</span>Experience</h2>
+
+      <div class="win">
+        <article class="entry">
+          <p class="meta">Jun 2026 – Aug 2026 · Budapest</p>
+          <h3>Network Engineer Intern · Szinva Net Informatikai Zrt.</h3>
+          <ul class="bul">
+            <li>Configured and validated HPE Aruba SSE policies, <span class="nw">zero-trust</span> tunnels and <span class="nw">cloud-managed</span> routing.</li>
+            <li>Diagnosed routing, VLAN segmentation and switching faults with Wireshark packet analysis.</li>
+            <li>Helped automate device configuration rollouts, health checks and switch provisioning.</li>
+          </ul>
+        </article>
+        <article class="entry">
+          <p class="meta">Jul 2025 – Nov 2025 · Budapest</p>
+          <h3>Network Operations Intern · ESZFK Nonprofit Kft.</h3>
+          <ul class="bul">
+            <li>Worked alongside senior NOC engineers on national healthcare network nodes; handled <span class="nw">SLA-critical</span> alerts and escalations.</li>
+            <li>Wrote VBA tools to process operational telemetry, saving several hours of manual work a week.</li>
+            <li>Reorganised subnet allocations, IPAM records and hardware inventory across sites.</li>
+          </ul>
+        </article>
+        <article class="entry">
+          <p class="meta">Jul 2019 – Dec 2023 · Budapest</p>
+          <h3>Operations Team Member (<span class="nw">part-time</span>) · McDonald's</h3>
+          <p>Four years alongside school and university. Taught me to stay calm and fast under pressure.</p>
+        </article>
+      </div>
+
+      <h3 class="sub">Certifications</h3>
+      <table class="tools">
+        <tbody>
+          <tr><th scope="row">2023</th><td>Cisco CCNA: Routing and Switching · Cisco Networking Academy</td></tr>
+          <tr><th scope="row">2023</th><td>Computer Systems Maintenance Technician · State Professional Qualification</td></tr>
+          <tr><th scope="row">2023</th><td>Office IT Specialist · State Professional Qualification</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="wrap block" id="projects" aria-labelledby="h-proj">
+      <h2 id="h-proj"><span class="cmd">C:\&gt; ftp projects</span>Projects</h2>
+
+      <article class="win project main">
+        <p class="meta"><span class="st st-run">THESIS</span> BSc · BME</p>
+        <h3>Empirical Evaluation of Performance, Scalability, and Threat Protection in <span class="nw">Connector-Based</span> Zero Trust Architecture</h3>
+        <p>In HPE Aruba SSE, private applications are reached through connectors: small VMs that open outbound mTLS tunnels to the cloud edge, so nothing on the inside listens for incoming connections. I built a <span class="nw">two-host</span> ESXi testbed around them and ran four experiments: how much load one connector takes, how fast a second one can be switched on automatically, what the client sees when a connector silently drops off the network, and how quickly a <span class="nw">threat-intel</span> update turns into a block.</p>
+
+        <figure class="topo">
+<pre role="img" aria-label="Testbed topology. Host 1 runs Connector 01. Host 2 runs Connector 02, the backend server and the benchmark client. Both connectors open outbound mTLS tunnels on TCP 443 to the HPE Aruba SSE cloud edge. The benchmark client accesses the published application over HTTPS 443 through the cloud edge. The connectors reach the backend server over HTTP port 80.">
+          ╔═════════════════════════════════════════════════╗
+          ║           HPE ARUBA SSE  ·  CLOUD EDGE          ║
+          ╚══════▲═════════════════════▲════════════════▲═══╝
+                 ┆                     ┆                ┆
+        mTLS/443 ┆            mTLS/443 ┆      HTTPS/443 ┆
+        outbound ┆            outbound ┆     app access ┆
+                 ┆                     ┆                ┆
+┌────────────────┆─────────┐  ┌────────┆────────────────┆────────┐
+│                ┆         │  │        ┆                ┆        │
+│         ┌──────┴──────┐  │  │ ┌──────┴──────┐  ┌──────▼──────┐ │
+│         │CONNECTOR 01 │  │  │ │CONNECTOR 02 │  │BENCH CLIENT │ │
+│         └──────┬──────┘  │  │ └──────┬──────┘  └─────────────┘ │
+│                │         │  │        │ HTTP/80                 │
+│                │         │  │        ▼                         │
+│                │ HTTP/80 │  │ ┌─────────────┐                  │
+│                └─────────────▶│ BACKEND :80 │                  │
+│                          │  │ └─────────────┘                  │
+└─ HOST 1 · ESXi ──────────┘  └── HOST 2 · ESXi ─────────────────┘</pre>
+          <figcaption>fig. 2: thesis testbed</figcaption>
+        </figure>
+
+        <table class="results">
+          <caption>RESULTS.CSV</caption>
+          <tbody>
+            <tr><th scope="row">E1 load</th><td>one connector (2 vCPU, 4 GB) peaks at <b>3,888&nbsp;req/s</b> with 1,400 concurrent clients; p50 309 ms, p95 609 ms. Past that, throughput collapses.</td></tr>
+            <tr><th scope="row">E2 scale-out</th><td><span class="nw">CPU-triggered</span> power-on via the vCenter API: VM up in <b>~5&nbsp;s</b>, carrying traffic in <b>~1.5&nbsp;min</b>. It replaced the first connector instead of sharing load.</td></tr>
+            <tr><th scope="row">E3 failure</th><td>a silent network loss on the active connector meant a full outage of <b>~5&nbsp;min</b> (median 301.5 s) before traffic moved over.</td></tr>
+            <tr><th scope="row">E4 threat intel</th><td>URLhaus indicators synced into an SWG category; blocking took effect in <b>~1&nbsp;s</b> or after <b>10+&nbsp;min</b>, two distinct ranges, cause still open.</td></tr>
+          </tbody>
+        </table>
+        <p class="foot">ztna · sse · mtls · esxi · hey · vcenter api · urlhaus &nbsp; <a href="https://github.com/SlihoczkiRichard/hpe-atmos-sse-automation" target="_blank" rel="noopener">&gt; source code</a></p>
+      </article>
+
+      <div class="two">
+        <article class="win project">
+          <p class="meta"><span class="st st-ok">RESEARCH</span> BME · PARIPA</p>
+          <h3>Zero Trust Network Access in Enterprise Hybrid Clouds</h3>
+          <p>Designed ZTNA models for enterprise <span class="nw">hybrid-cloud</span> environments built on HPE Aruba Security Service Edge. The groundwork the thesis experiments build on.</p>
+          <p class="foot">ztna · sse · hybrid cloud · hpe aruba</p>
+        </article>
+        <article class="win project">
+          <p class="meta"><span class="st st-new">FALL 2026</span> UPC-FIB · Barcelona</p>
+          <h3>[UPC-FIB Project Title]</h3>
+          <p>[One or two sentences from SDN/NFV Orchestration, Advanced Network Architectures or HPC: the problem, what you built, what came out of it.]</p>
+          <p class="foot">[tag] · [tag] · [tag] &nbsp; <a href="[Repository or Report Link]">&gt; details</a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== ARCADE ===== -->
+    <section class="wrap block" id="arcade" aria-labelledby="h-arcade">
+      <h2 id="h-arcade"><span class="cmd">C:\&gt; telnet arcade 23</span>Arcade</h2>
+      <p class="intro">Every network engineer needs a break. All three games are written from scratch for this page.</p>
+
+      <div class="win arcade">
+        <div class="arcade-tabs" role="group" aria-label="Choose a game">
+          <button type="button" data-game="snake" aria-pressed="true">[ SNAKE.EXE ]</button>
+          <button type="button" data-game="packets" aria-pressed="false">[ PACKETS.EXE ]</button>
+          <button type="button" data-game="buffer" aria-pressed="false">[ BUFFER.EXE ]</button>
+        </div>
+        <canvas id="game" width="480" height="320" tabindex="0" aria-label="Game screen. Click, tap or press space to start."></canvas>
+        <p class="arcade-help" data-for="snake"><span class="kbd-help">arrows / WASD to steer</span><span class="touch-help">swipe to steer</span> · eat the packets · don't byte yourself</p>
+        <p class="arcade-help" data-for="buffer" hidden><span class="kbd-help">← → move · ↑ rotate · ↓ soft drop · SPACE drop</span><span class="touch-help">drag to move · tap to rotate · hold to soft drop · flick down to drop</span> · flush full rows before the buffer overflows</p>
+        <p class="arcade-help" data-for="packets" hidden><span class="kbd-help">← → move · SPACE fire</span><span class="touch-help">drag to move · hold to fire</span> · malware is inbound, you are the firewall</p>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="wrap block" id="contact" aria-labelledby="h-contact">
+      <h2 id="h-contact"><span class="cmd">C:\&gt; finger richard</span>Contact</h2>
+
+      <div class="win contact">
+        <p>Always happy to talk about network security, Zero Trust and distributed systems, whether it's research, a project or just a good question. Write to me.</p>
+        <table class="ids">
+          <tbody>
+            <tr><th scope="row">mail</th><td><a href="mailto:richard.slihoczki@outlook.com">richard.slihoczki@outlook.com</a></td></tr>
+            <tr><th scope="row">github</th><td><a href="https://github.com/SlihoczkiRichard" rel="me noopener" target="_blank">SlihoczkiRichard</a></td></tr>
+            <tr><th scope="row">linkedin</th><td><a href="https://linkedin.com/in/richardslihoczki" rel="me noopener" target="_blank">richardslihoczki</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>© <span id="year">2026</span> Richard Slihoczki · <span class="ready">Connection closed by foreign host. READY.</span><span class="blink" aria-hidden="true">█</span></p>
+  </footer>
+
+
+  <!-- Norton Commander style menu bar (keys 1–9) -->
+  <nav class="keybar" aria-label="Sections">
+    <a href="#top"><b>1</b>Top</a>
+    <button type="button" class="theme-btn"><b>2</b>Theme</button>
+    <a href="#research"><b>3</b>Research</a>
+    <a href="#past"><b>4</b>Past</a>
+    <a href="#work"><b>5</b>Work</a>
+    <a href="#projects"><b>6</b>Projects</a>
+    <a href="#arcade"><b>7</b>Arcade</a>
+    <a href="#contact"><b>8</b>Contact</a>
+    <a href="assets/cv/Richard_Slihoczki_CV.pdf" download><b>9</b>CV</a>
+  </nav>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/games.js" defer></script>
+</body>
+</html>
